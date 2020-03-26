@@ -31,7 +31,20 @@ namespace Jaworski.BL
         {
             get
             {
-                return Name + "." + LastName;
+                string NameLastName = Name;
+
+                if (!string.IsNullOrWhiteSpace(Name))
+                {
+                    if (!string.IsNullOrWhiteSpace(LastName))
+                    {
+                        NameLastName += ", ";
+
+                    }
+
+                    NameLastName += LastName;
+                }
+
+                return NameLastName;
             }
         }
     }

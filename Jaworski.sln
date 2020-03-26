@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jaworski.BL", "Jaworski.BL\Jaworski.BL.csproj", "{DD4CDA20-303E-4A93-AD02-D9DF18E6DDF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A54E6E93-45C4-49B8-AB1B-CA46FDD13C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jaworski.BL.Test", "Jaworski.BL.Test\Jaworski.BL.Test.csproj", "{4B781AEC-3A05-4BF0-A30F-97797E5A33D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{DD4CDA20-303E-4A93-AD02-D9DF18E6DDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD4CDA20-303E-4A93-AD02-D9DF18E6DDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD4CDA20-303E-4A93-AD02-D9DF18E6DDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B781AEC-3A05-4BF0-A30F-97797E5A33D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B781AEC-3A05-4BF0-A30F-97797E5A33D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B781AEC-3A05-4BF0-A30F-97797E5A33D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B781AEC-3A05-4BF0-A30F-97797E5A33D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B781AEC-3A05-4BF0-A30F-97797E5A33D8} = {A54E6E93-45C4-49B8-AB1B-CA46FDD13C8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F12E41B-C2CB-49ED-AF40-501D31AA0D58}
