@@ -8,6 +8,8 @@ namespace Jaworski.BL
 {
     public class Client
     {
+        public static int Counter { get; set; }
+
         private string _lastName;
 
         public string LastName
@@ -33,9 +35,9 @@ namespace Jaworski.BL
             {
                 string NameLastName = Name;
 
-                if (!string.IsNullOrWhiteSpace(Name))
+                if (!string.IsNullOrWhiteSpace(LastName))
                 {
-                    if (!string.IsNullOrWhiteSpace(LastName))
+                    if (!string.IsNullOrWhiteSpace(NameLastName))
                     {
                         NameLastName += ", ";
 
