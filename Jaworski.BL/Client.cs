@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Jaworski.BL
 {
     public class Client
-    {
+    {                    
+        //Properties
         public static int Counter { get; set; }
 
         private string _lastName;
@@ -28,7 +29,7 @@ namespace Jaworski.BL
         public string Name { get; set; }
         public string Email { get; set; }
         public int ClientID { get; private set; }
-        
+
         public string NameLastName
         {
             get
@@ -48,6 +49,53 @@ namespace Jaworski.BL
 
                 return NameLastName;
             }
+        }
+
+
+        //Methods
+        public bool ValidateData()
+        {
+            var ProperVal = true;
+
+            if (string.IsNullOrWhiteSpace(LastName))
+                ProperVal = false;
+
+            if (string.IsNullOrWhiteSpace(Email))
+                ProperVal = false;
+
+            return ProperVal;
+        }
+
+        /// <summary>
+        /// This method will be saved Client
+        /// </summary>
+        /// <returns></returns>
+        public bool Save()
+        {
+            //code to saved defined Client
+            return true;
+        }
+
+        /// <summary>
+        /// This method will be download one, particluar Client data
+        /// </summary>
+        /// <param name="ClientID"></param>
+        /// <returns></returns>
+        public Client DownloadData(int ClientID)
+        {
+            // code to download ClientID data
+            return new Client();
+        }
+
+        /// <summary>
+        /// Download all Clients data
+        /// </summary>
+        /// <returns></returns>
+        public List<Client> DownloadData()
+        {
+            //Code can download all Client data
+            return new List<Client>();
+
         }
     }
 }

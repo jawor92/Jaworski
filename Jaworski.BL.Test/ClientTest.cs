@@ -82,5 +82,54 @@ namespace Jaworski.BL.Test
             Assert.AreEqual(3, Client.Counter);
 
         }
+
+        [TestMethod]
+        public void ValidateDataTest()
+        {
+            //Arrange
+            var Client = new Client();
+            Client.LastName = "Jaworski";
+            Client.Email = "jaworski@mail.com";
+
+            var expected = true;
+
+            //Act
+            var actual = Client.ValidateData();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidateData_NoLastName_Test()
+        {
+            //Arrange
+            var Client = new Client();
+            Client.Email = "jaworski@mail.com";
+
+            var expected = false;
+
+            //Act
+            var actual = Client.ValidateData();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidateData_NoMail_Test()
+        {
+            //Arrange
+            var Client = new Client();
+            Client.LastName = "Jaworski";
+
+            var expected = false;
+
+            //Act
+            var actual = Client.ValidateData();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
