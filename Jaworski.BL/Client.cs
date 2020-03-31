@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Jaworski.BL
 {
     public class Client
-    {                    
+    {
+        public Client()
+        {
+
+        }
+
+        public Client(int ClientID)
+        {
+            // "this" - the same name variable = argument, rel to prop
+            this.ClientID = ClientID; //setter from argument, related to field below
+        }
+                     
         //Properties
         public static int Counter { get; set; }
 
