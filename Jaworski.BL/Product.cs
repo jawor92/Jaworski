@@ -16,10 +16,8 @@ namespace Jaworski.BL
         }
 
         private int ProductID { get; set; }
-
         public Decimal? CurrentPrice { get; set; }
         //"Decimal?" - it can be "0", type -> nullable
-
         public string Description { get; set; }
         public string NameOfProduct { get; set; }
 
@@ -69,7 +67,6 @@ namespace Jaworski.BL
         {
             //Code can download all Products data
             return new List<Product>();
-
         }
     }
 }

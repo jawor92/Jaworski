@@ -16,12 +16,10 @@ namespace Jaworski.BL
             // "this" - the same name variable = argument, rel to prop
             this.ClientID = ClientID; //setter from argument, related to field below
         }
-                     
+           
         //Properties
         public static int Counter { get; set; }
-
         private string _lastName;
-
         public string LastName
         {
             get
@@ -34,11 +32,9 @@ namespace Jaworski.BL
                 _lastName = value;
             }
         }
-
         public string Name { get; set; }
         public string Email { get; set; }
         public int ClientID { get; private set; }
-
         public string NameLastName
         {
             get
@@ -74,7 +70,6 @@ namespace Jaworski.BL
 
             return ProperVal;
         }
-
         /// <summary>
         /// This method will be saved Client
         /// </summary>
@@ -84,7 +79,6 @@ namespace Jaworski.BL
             //code to saved defined Client
             return true;
         }
-
         /// <summary>
         /// This method will be download one, particluar Client data
         /// </summary>
@@ -95,7 +89,6 @@ namespace Jaworski.BL
             // code to download ClientID data
             return new Client();
         }
-
         /// <summary>
         /// Download all Clients data
         /// </summary>

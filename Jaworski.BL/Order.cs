@@ -14,9 +14,7 @@ namespace Jaworski.BL
         {
             this.OrderID = OrderID;
         }
-
         public int OrderID { get; set; }
-
         public DateTimeOffset? OrderDate { get; set; }
 
         //Methods
@@ -33,7 +31,6 @@ namespace Jaworski.BL
 
             return ProperVal;
         }
-
         /// <summary>
         /// This method will be saved order
         /// </summary>
@@ -43,7 +40,6 @@ namespace Jaworski.BL
             //code to saved defined order
             return true;
         }
-
         /// <summary>
         /// This method will be download one, particluar order data
         /// </summary>
@@ -54,7 +50,6 @@ namespace Jaworski.BL
             // code to download OrderID data
             return new Client();
         }
-
         /// <summary>
         /// Download all orders data
         /// </summary>
@@ -63,7 +58,6 @@ namespace Jaworski.BL
         {
             //Code can download all order data
             return new List<Order>();
-
         }
 
     }

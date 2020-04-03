@@ -13,11 +13,8 @@
         }
 
         public int PositionOrderID { get; set; }
-
         public int AmountOrder { get; set; }
-
         public int ProductID { get; set; }
-
         public decimal? PriceOfPurchase { get; set; }
 
         //Methods
