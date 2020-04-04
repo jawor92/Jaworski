@@ -24,8 +24,6 @@ namespace Jaworski.BL.Test
             var actual = ClientRepos.DownloadData(1);
 
             //Assert
-            //Assert.AreNotEqual(expected, actual); //if AreEqual test failed = two separate objects
-            Assert.AreEqual(expected.ClientID, actual.ClientID);
             Assert.AreEqual(expected.Email, actual.Email);
             Assert.AreEqual(expected.Name, actual.Name);
             Assert.AreEqual(expected.LastName, actual.LastName);

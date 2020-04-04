@@ -14,7 +14,7 @@ namespace Jaworski.BL
         {
             this.OrderID = OrderID;
         }
-        public int OrderID { get; set; }
+        public int OrderID { get; private set; }
         public DateTimeOffset? OrderDate { get; set; }
 
         //Methods
@@ -45,10 +45,10 @@ namespace Jaworski.BL
         /// </summary>
         /// <param name="OrderID"></param>
         /// <returns></returns>
-        public Client DownloadData(int OrderID)
+        public Order DownloadData(int OrderID)
         {
             // code to download OrderID data
-            return new Client();
+            return new Order();
         }
         /// <summary>
         /// Download all orders data

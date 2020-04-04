@@ -6,15 +6,6 @@ namespace Jaworski.BL
     {
         //Methods
         /// <summary>
-        /// This method will be saved Client
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            //code to saved defined Client
-            return true;
-        }
-        /// <summary>
         /// This method will be download one, particluar Client data
         /// </summary>
         /// <param name="ClientID"></param>
@@ -45,6 +36,15 @@ namespace Jaworski.BL
             //Code can download all Client data
             return new List<Client>();
 
+        }
+        /// <summary>
+        /// This method will be saved Client
+        /// </summary>
+        /// <returns></returns>
+        public bool Save()
+        {
+            //code to saved defined Client
+            return true;
         }
     }
 }
