@@ -19,7 +19,18 @@ namespace Jaworski.BL
         public Decimal? CurrentPrice { get; set; }
         //"Decimal?" - it can be "0", type -> nullable
         public string Description { get; set; }
-        public string NameOfProduct { get; set; }
+        private string _NameOfProduct;
+
+        public string NameOfProduct
+        {
+            get
+            
+            { 
+                        
+            }
+            set { _NameOfProduct = value; }
+        }
+
 
         //Methods
         /// <summary>
