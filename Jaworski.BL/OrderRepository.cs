@@ -41,5 +41,18 @@ namespace Jaworski.BL
             //code to saved defined order
             return true;
         }
+
+        public OrderDisplay TakeOrderToDisplay(int OrderID)
+        {
+            OrderDisplay orderDis = new OrderDisplay();
+
+            if (OrderID == 10)
+            {
+                orderDis.Name = "Mateusz";
+                orderDis.LastName = "Kowal";
+                orderDis.DateOrder = new DateTimeOffset(2018, 5, 21, 12, 00, 00, new TimeSpan(5, 0, 0));
+
+            }
+        }
     }
 }

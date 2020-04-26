@@ -24,6 +24,11 @@ namespace Jaworski.BL
         public string City { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
-               
+        public Address DownloadAdress(int AddressID)
+        {
+            // code to download AdressID data
+            return new Address();
+        }
+
     }
 }

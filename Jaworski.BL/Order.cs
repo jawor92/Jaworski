@@ -5,6 +5,7 @@ namespace Jaworski.BL
 {
     public class Order
     {
+        #region constructor
         public Order()
         {
 
@@ -14,9 +15,19 @@ namespace Jaworski.BL
         {
             this.OrderID = OrderID;
         }
+
+        #endregion
+
+        #region properties
         public int OrderID { get; private set; }
         public DateTimeOffset? OrderDate { get; set; }
 
+        public List<OrderPosition> OrderPositions { get; set; }
+        public int ClientID { get; set; }
+        public int AdressOrder { get; set; }
+        #endregion
+
+        #region methods
         //Methods
         /// <summary>
         /// Check data of order
@@ -59,6 +70,8 @@ namespace Jaworski.BL
             //Code can download all order data
             return new List<Order>();
         }
+
+        #endregion
 
     }
 }

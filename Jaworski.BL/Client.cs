@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace Jaworski.BL
 {
-    public class Client
+    public class Client 
     {
-        public Client()
+        #region Constructors
+        public Client() : this(0) //giving "0" as a ClientID
         {
 
         }
@@ -15,8 +16,11 @@ namespace Jaworski.BL
         {
             // "this" - the same name variable = argument, rel to prop
             this.ClientID = ClientID; //setter from argument, related to field below
+            ListOfAdresses = new List<Address>; //allow to get empty list, instead of list with NULL value
         }
-           
+        #endregion
+
+        #region Properties
         //Properties
         public static int Counter { get; set; }
         private string _lastName;
@@ -56,7 +60,13 @@ namespace Jaworski.BL
             }
         }
 
+        //public Address HomeAddress { get; set; }
+        //public Address BuissnessAddress { get; set; }
+        //instead of two prop "address" will be implemented addresses as a list
+        public List<Address> ListOfAdresses { get; set; }
+        #endregion
 
+        #region Methods
         //Methods
         public bool ValidateData()
         {
@@ -97,7 +107,7 @@ namespace Jaworski.BL
         {
             //Code can download all Client data
             return new List<Client>();
-
         }
+        #endregion
     }
 }

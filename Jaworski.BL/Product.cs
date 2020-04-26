@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Jaworski.BL
 {
-    public class Product
+    public class Product : BaseClass
     {
         public Product()
         {
