@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common;
 
 namespace Jaworski.BL
 {
-    public class Order
+    public class Order : ILog
     {
         #region constructor
         public Order()
@@ -69,6 +70,14 @@ namespace Jaworski.BL
         {
             //Code can download all order data
             return new List<Order>();
+        }
+
+        public string Log()
+        {
+            var log = OrderID + ": " +
+                "Data: " + OrderDate;
+
+            return log;
         }
 
         #endregion

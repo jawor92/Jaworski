@@ -79,5 +79,13 @@ namespace Jaworski.BL
             //Code can download all Products data
             return new List<Product>();
         }
+        public string Log()
+        {
+            var log = ProductID + ": " +
+                NameOfProduct + " " +
+                "Description: " + Description + " ";
+
+            return log;
+        }
     }
 }

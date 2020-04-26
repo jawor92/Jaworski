@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common;
 
 
 namespace Jaworski.BL
 {
-    public class Client 
+    public class Client : BaseClass, ILog
     {
         #region Constructors
         public Client() : this(0) //giving "0" as a ClientID
@@ -109,5 +110,14 @@ namespace Jaworski.BL
             return new List<Client>();
         }
         #endregion
+
+        public string Log()
+        {
+            var log = ClientID + ": " + 
+                NameLastName + " " + 
+                "Email: " + Email + " ";
+
+            return log;
+        }
     }
 }
